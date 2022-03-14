@@ -4,10 +4,10 @@ const router = new Router
 
 router
     .get('/frameworks', frameworks.show)
-    .get('/frameworks/:names', frameworks.show)
-    .get('/frameworks/:name/:version', frameworks.show)
-    .del('/frameworks/:name/:version', frameworks.destroy)
-    .get('/frameworks/:name/:version/zip', frameworks.download)
+    .get('/frameworks/:branchs', frameworks.show)
+    .get('/frameworks/:branch/:reponame', frameworks.show)
+    .del('/frameworks/:branch/:reponame/:filename', frameworks.destroy)
+    .get('/frameworks/:branch/:reponame/:filename', frameworks.download)
     .post('/frameworks', frameworks.create)
 
 module.exports = router

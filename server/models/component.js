@@ -4,8 +4,9 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const ComponentSchema = new Schema({
-    name: String,
-    version: String,
+    branch: String,
+    reponame: String,
+    filename: String,
     annotate: String,
     sha: String,
     create_at: {

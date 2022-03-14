@@ -41,13 +41,13 @@ function binaryRoot() {
     return binaryRoot
 }
 
-function binaryDir(name, version) {
-    return path.join(binaryRoot(), name, version)
+function binaryDir(branch, reponame) {
+    return path.join(binaryRoot(), branch, reponame)
 }
 
 module.exports = {
     mkdirp,
     rmdir,
     binaryRoot,
-    binaryDir
+    binaryDir,
 }
